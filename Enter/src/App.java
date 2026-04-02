@@ -7,7 +7,7 @@ public class App {
 
         // --- Create objects ---
         Edificio office = new Edificio(
-                "GreenTower Office", 2500, 180_000, 3_200, 120);
+                "GreenTower Office", 2500, 180_000, 3_200, 120, 0);
 
         Carro sedan = new Carro(
                 "Toyota", "Camry", 2020, 2.5, 18_000, 8.5);

@@ -1,13 +1,13 @@
 public class Edificio implements HuellaCarbono {
 
-    private String nombre;
-    private double metroCuadrados;
-    private double energiaActualKwh;      // electricity consumption
-    private double usoGasAnual; // natural gas consumption
-    private int ocupantes;
+    private final String nombre;
+    private final double metroCuadrados;
+    private final double energiaActualKwh;      // electricity consumption
+    private final double usoGasAnual; // natural gas consumption
+    private final int ocupantes;
 
     public Edificio(String nombre, double metroCuadrados,
-                    double energiaActualKwh, double usoGasAnual, int occupants) {
+                    double energiaActualKwh, double usoGasAnual, int occupants, int ocupantes) {
         this.nombre = nombre;
         this.metroCuadrados = metroCuadrados;
         this.energiaActualKwh = energiaActualKwh;

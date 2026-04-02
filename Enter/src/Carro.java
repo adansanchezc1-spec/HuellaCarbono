@@ -1,11 +1,11 @@
 public class Carro implements HuellaCarbono {
 
-    private String hace; // make
-    private String modelo;
-    private int anio;
-    private double litrosMotor;          // engine size in litres
-    private double kmAnuales;            // km driven per year
-    private double litrosPor100Km; // litres per 100 km
+    private final String hace; // make
+    private final String modelo;
+    private final int anio;
+    private final double litrosMotor;          // engine size in litres
+    private final double kmAnuales;            // km driven per year
+    private final double litrosPor100Km; // litres per 100 km
 
     public Carro(String hace, String modelo, int anio,
                  double litrosMotor, double kmAnuales, double litrosPor100Km) {

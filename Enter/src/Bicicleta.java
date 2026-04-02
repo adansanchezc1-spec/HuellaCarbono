@@ -1,11 +1,11 @@
 public class Bicicleta implements HuellaCarbono {
 
-    private String marca;
-    private String tipo;           // "road", "mountain", "electric"
-    private double anchoRuedaPulgadas;
-    private double kmAnuales;
-    private boolean isElectrica;
-    private double potenciaBateriaKwhPer100Km; // only relevant if electric
+    private final String marca;
+    private final String tipo;           // "road", "mountain", "electric"
+    private final double anchoRuedaPulgadas;
+    private final double kmAnuales;
+    private final boolean isElectrica;
+    private final double potenciaBateriaKwhPer100Km; // only relevant if electric
 
     public Bicicleta(String marca, String tipo, double anchoRuedaPulgadas,
                      double kmAnuales, boolean isElectrica, double potenciaBateriaKwhPer100Km) {
