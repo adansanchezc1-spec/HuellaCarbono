@@ -3,16 +3,16 @@ public class Carro implements HuellaCarbono {
     private static final double FACTOR_EMISION_GASOLINA = 2.31;
     private static final int PRIMER_AUTO_MODERNO = 1886;
 
-    private final String hace;
+    private final String marca;
     private final String modelo;
     private final int anio;
     private final double litrosMotor;
     private final double kmAnuales;
     private final double litrosPor100Km;
 
-    public Carro(String hace, String modelo, int anio,
+    public Carro(String marca, String modelo, int anio,
                  double litrosMotor, double kmAnuales, double litrosPor100Km) {
-        this.hace = validarTexto(hace, "hace");
+        this.marca = validarTexto(marca, "marca");
         this.modelo = validarTexto(modelo, "modelo");
         this.anio = validarAnio(anio);
         this.litrosMotor = validarMayorQueCero(litrosMotor, "litrosMotor");
@@ -21,7 +21,7 @@ public class Carro implements HuellaCarbono {
     }
 
     public void pitar() {
-        System.out.println(hace + " " + modelo + " hace: Beep beep!");
+        System.out.println(marca + " " + modelo + " hace: Beep beep!");
     }
 
     public double getCostoCombustible(double precioPorLitro) {
@@ -36,7 +36,7 @@ public class Carro implements HuellaCarbono {
     @Override
     public String toString() {
         return String.format("Carro[%d %s %s, %.1fL motor, %.0f km/anio]",
-                anio, hace, modelo, litrosMotor, kmAnuales);
+                anio, marca, modelo, litrosMotor, kmAnuales);
     }
 
     private double calcularLitrosAnuales() {

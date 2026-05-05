@@ -1,0 +1,9 @@
+Reporte de Huella de Carbono
+============================================================
+Objeto                                        Huella de Carbono (kg CO2e/anio)
+============================================================
+Edificio[nombre=GreenTower Office, 2500 m2, 120 ocupantes] 48.468,00 kg
+Carro[2020 Toyota Camry, 2,5L motor, 18000 km/anio] 3.534,30 kg
+Bicicleta[Trek electric, 28 pulgadas, 3000 km/anio, electrica=true] 38,39 kg
+Bicicleta[Giant road, 28 pulgadas, 5000 km/anio, electrica=false] 110,00 kg
+============================================================
