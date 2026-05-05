@@ -47,7 +47,7 @@ public class App {
             writer.println("=".repeat(60));
             System.out.println("Reporte guardado en: " + rutaArchivo);
         } catch (IOException exception) {
-            System.out.println("No fue posible guardar el reporte: " + exception.getMessage());
+            throw new IllegalStateException("No fue posible guardar el reporte.", exception);
         }
     }
 
