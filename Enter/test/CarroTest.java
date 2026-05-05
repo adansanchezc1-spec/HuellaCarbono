@@ -2,6 +2,9 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+/**
+ * Pruebas unitarias para la clase Carro.
+ */
 public class CarroTest {
 
     private static final double DELTA = 0.001;

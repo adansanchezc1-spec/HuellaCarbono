@@ -2,6 +2,9 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+/**
+ * Pruebas unitarias para la clase Edificio.
+ */
 public class EdificioTest {
 
     private static final double DELTA = 0.001;

@@ -3,10 +3,19 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
+/**
+ * Clase principal que ejecuta la aplicación de huella de carbono.
+ * Coordina la creación de objetos de dominio, la generación del reporte
+ * y la exhibición de comportamientos específicos.
+ */
 public class App {
 
     private static final String RUTA_REPORTE = "reporte_huella_carbono.txt";
 
+    /**
+     * Crea instancias de dominio, arma la lista de items y ejecuta
+     * las tareas principales de informe y salida.
+     */
     public static void main(String[] args) {
         Edificio office = new Edificio(
                 "GreenTower Office", 2500, 180_000, 3_200, 120);
@@ -31,6 +40,9 @@ public class App {
         mostrarComportamientos(office, sedan, eBike, roadBike);
     }
 
+    /**
+     * Escribe el reporte de huella de carbono en un archivo de texto.
+     */
     public static void guardarReporte(ArrayList<HuellaCarbono> items, String rutaArchivo) {
         validarReporte(items, rutaArchivo);
 
@@ -51,6 +63,9 @@ public class App {
         }
     }
 
+    /**
+     * Imprime el reporte de huella de carbono en consola.
+     */
     private static void imprimirReporte(ArrayList<HuellaCarbono> items) {
         System.out.println("=".repeat(60));
         System.out.printf("%-45s %s%n", "Objeto", "Huella de Carbono (kg CO2e/anio)");
@@ -63,6 +78,9 @@ public class App {
         System.out.println("=".repeat(60));
     }
 
+    /**
+     * Muestra ejemplos de comportamiento específico para cada tipo.
+     */
     private static void mostrarComportamientos(Edificio office, Carro sedan,
                                                Bicicleta eBike, Bicicleta roadBike) {
         System.out.println("\n--- comportamientos ---");
@@ -73,6 +91,9 @@ public class App {
                 roadBike.getCaloriesBurned());
     }
 
+    /**
+     * Verifica que la lista y la ruta de archivo sean válidas antes de procesar.
+     */
     private static void validarReporte(ArrayList<HuellaCarbono> items, String rutaArchivo) {
         if (items == null || items.isEmpty()) {
             throw new IllegalArgumentException("items no puede estar vacio.");

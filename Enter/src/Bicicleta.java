@@ -1,3 +1,7 @@
+/**
+ * Representa una bicicleta y calcula su huella de carbono anual.
+ * Diferencia entre bicicletas eléctricas y convencionales.
+ */
 public class Bicicleta implements HuellaCarbono {
 
     private static final double HUELLA_BASE_BICICLETA = 5.0;
@@ -14,6 +18,9 @@ public class Bicicleta implements HuellaCarbono {
     private final boolean isElectrica;
     private final double potenciaBateriaKwhPer100Km;
 
+    /**
+     * Constructor con validaciones claras de cada entrada.
+     */
     public Bicicleta(String marca, String tipo, double anchoRuedaPulgadas,
                      double kmAnuales, boolean isElectrica, double potenciaBateriaKwhPer100Km) {
         this.marca = validarTexto(marca, "marca");
@@ -24,10 +31,16 @@ public class Bicicleta implements HuellaCarbono {
         this.potenciaBateriaKwhPer100Km = validarBateria(isElectrica, potenciaBateriaKwhPer100Km);
     }
 
+    /**
+     * Simula el sonido de la campana de la bicicleta.
+     */
     public void ringBell() {
         System.out.println(marca + " cicla hace: Ring ring!");
     }
 
+    /**
+     * Retorna la estimación de calorías quemadas por año.
+     */
     public double getCaloriesBurned() {
         return isElectrica ? kmAnuales * CALORIAS_POR_KM_ELECTRICA : kmAnuales * CALORIAS_POR_KM;
     }

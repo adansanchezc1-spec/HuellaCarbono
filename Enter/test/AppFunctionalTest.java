@@ -7,6 +7,10 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
+/**
+ * Pruebas funcionales para la clase App.
+ * Verifica el comportamiento de generación de reportes.
+ */
 public class AppFunctionalTest {
 
     @Test

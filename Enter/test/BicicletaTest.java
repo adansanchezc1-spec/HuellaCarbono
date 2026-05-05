@@ -2,6 +2,9 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+/**
+ * Pruebas unitarias para la clase Bicicleta.
+ */
 public class BicicletaTest {
 
     private static final double DELTA = 0.001;

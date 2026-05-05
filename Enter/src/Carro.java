@@ -1,3 +1,7 @@
+/**
+ * Representa un vehículo con cálculo de huella de carbono
+ * y funcionalidad básica de carro.
+ */
 public class Carro implements HuellaCarbono {
 
     private static final double FACTOR_EMISION_GASOLINA = 2.31;
@@ -10,6 +14,9 @@ public class Carro implements HuellaCarbono {
     private final double kmAnuales;
     private final double litrosPor100Km;
 
+    /**
+     * Constructor validado para garantizar datos consistentes.
+     */
     public Carro(String marca, String modelo, int anio,
                  double litrosMotor, double kmAnuales, double litrosPor100Km) {
         this.marca = validarTexto(marca, "marca");
@@ -20,10 +27,16 @@ public class Carro implements HuellaCarbono {
         this.litrosPor100Km = validarMayorQueCero(litrosPor100Km, "litrosPor100Km");
     }
 
+    /**
+     * Simula la bocina del carro.
+     */
     public void pitar() {
         System.out.println(marca + " " + modelo + " hace: Beep beep!");
     }
 
+    /**
+     * Calcula el costo anual de combustible según el precio por litro.
+     */
     public double getCostoCombustible(double precioPorLitro) {
         return calcularLitrosAnuales() * validarNoNegativo(precioPorLitro, "precioPorLitro");
     }

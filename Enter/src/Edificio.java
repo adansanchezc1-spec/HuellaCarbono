@@ -1,3 +1,7 @@
+/**
+ * Representa un edificio con consumo energético y emisiones de gas.
+ * Calcula la huella de carbono de su consumo anual.
+ */
 public class Edificio implements HuellaCarbono {
 
     private static final double FACTOR_EMISION_ELECTRICIDAD = 0.233;
@@ -9,6 +13,9 @@ public class Edificio implements HuellaCarbono {
     private final double usoGasAnual;
     private final int ocupantes;
 
+    /**
+     * Constructor que valida los datos de área, energía y ocupación.
+     */
     public Edificio(String nombre, double metroCuadrados,
                     double energiaActualKwh, double usoGasAnual, int ocupantes) {
         this.nombre = validarTexto(nombre, "nombre");
@@ -18,10 +25,16 @@ public class Edificio implements HuellaCarbono {
         this.ocupantes = validarEnteroNoNegativo(ocupantes, "ocupantes");
     }
 
+    /**
+     * Simula una operación de mantenimiento del edificio.
+     */
     public void mantenimiento() {
         System.out.println(nombre + " esta en mantenimiento.");
     }
 
+    /**
+     * Devuelve la intensidad energética por metro cuadrado.
+     */
     public double getEnergyIntensity() {
         return energiaActualKwh / metroCuadrados;
     }
