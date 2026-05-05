@@ -1,7 +1,7 @@
-public interface  HuellaCarbono {
+public interface HuellaCarbono {
+
     /**
-     * Returns the estimated annual carbon footprint in kg of CO2e.
+     * Retorna la huella de carbono anual estimada en kg de CO2e.
      */
     double getHuellaCarbono();
-
 }
